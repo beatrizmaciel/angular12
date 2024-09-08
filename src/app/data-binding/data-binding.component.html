@@ -1,0 +1,21 @@
+<section>
+    <article>
+        <h3>Interpolação</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
+        <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+    </article>
+
+    <article>
+        <!-- usamos o property binding para enviar um valor do componente para o template. 
+        quando não existe uma propriedade no elemento, utiliza-se [attr.colspan] -->
+        <h3>Property Binding</h3>
+        <!-- interpolação -->
+        <img src="{{ urlImagem }}">
+        <!-- property binding -->
+        <img [src]="urlImagem">
+        <!-- property binding por baixo dos panos -->
+        <img bind-src="urlImagem">
+    </article>
+</section>
